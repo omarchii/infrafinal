@@ -22,8 +22,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t infrafinal.azurecr.io/flask-backend:${{ github.sha }} .
-        docker push <tu-acr>.azurecr.io/flask-backend:${{ github.sha }}
+         docker build -t infrafinal.azurecr.io/flask-backend:latest .
+         docker push infrafinal.azurecr.io/flask-backend:latest
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
